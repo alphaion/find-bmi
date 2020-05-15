@@ -194,7 +194,17 @@
             if (w == "" || h == "") {
                 message = "Invalid";
                 document.getElementById("message").innerHTML = message;
+                res = "Does not Exist";
+                document.getElementById("output").innerHTML = res;
             }
+            
+            if (weight <= 0 || height <= 0 ) {
+                message = "Invalid";
+                document.getElementById("message").innerHTML = message;
+                res = "Does not Exist";
+                document.getElementById("output").innerHTML = res;
+            }
+            
             if (res < 16) {
                 message = "Severe Thinness";
                 document.getElementById("message").innerHTML = message;
