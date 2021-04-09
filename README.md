@@ -1,4 +1,4 @@
 # find-bmi
 Find BMI
 
-live at: https://gitrishabh-singh.github.io/find-bmi/
+live at: https://alphaion.github.io/find-bmi/
