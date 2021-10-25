@@ -4,7 +4,8 @@ BMI: Body Mass Index, a person's weight in kilograms divided by the square of he
 Check your BMI [Here](https://alphaion.github.io/findBMI/)
 
 ## GIF
-https://user-images.githubusercontent.com/57044551/138739202-5741b50b-38ea-4160-ac5c-b53c5d91beab.mp4
+![FYBMI](https://user-images.githubusercontent.com/57044551/138740851-ed24088d-eda9-488f-99f1-9d3fe7d2a494.gif)
+
 
 ## Project Languages
 > HTML,
