@@ -1,5 +1,15 @@
-# Find your BMI (Body Mass Index)
-Find your BMI with color theme.
-Live at: https://alphaion.github.io/findBMI/
+# Description
+BMI: Body Mass Index, a person's weight in kilograms divided by the square of height in meters. A high BMI can indicate high body fatness. Javascript feature that tells your BMI according the right Color psychology.
+## Live
+Check your BMI [Here](https://alphaion.github.io/findBMI/)
 
-![bmi](https://user-images.githubusercontent.com/57044551/117648072-68c1fe00-b1ab-11eb-920d-9d6a7374dc72.png)
+## GIF
+https://user-images.githubusercontent.com/57044551/138739202-5741b50b-38ea-4160-ac5c-b53c5d91beab.mp4
+
+## Project Languages
+> HTML,
+> CSS,
+> JS
+## Author
+Rishabh Singh
+[Alphaion](https://github.com/alphaion)
