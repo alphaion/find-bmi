@@ -1,5 +1,4 @@
-<!--Developed by Rishabh Singh-->
-<!--IG: rishabhsingh03-->
+<!-- Contributor: Rishabh Singh (alphaion) -->
 
 <html lang="en">
 
@@ -7,152 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Your BMI</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="jquery-2.1.4.js"></script>
-
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- Font CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Oswald&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #1a1b1e;
-            font-family: 'Jost', sans-serif;
-        }
-
-        .conatiner {
-            width: 100vw;
-            height: 100vh;
-        }
-
-        @media (min-width: 640px) {
-            .main {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                display: grid;
-            }
-
-            .weight {
-                margin: 1rem;
-                padding: 1.5rem;
-                background-color: #fff;
-                outline: none;
-                border: 0;
-                font-size: 3rem;
-                color: #000;
-                font-weight: bolder;
-                font-family: 'Jost', sans-serif;
-            }
-
-            .height {
-                margin: 1rem;
-                padding: 1.5rem;
-                background-color: #fff;
-                outline: none;
-                border: 0;
-                font-size: 3rem;
-                color: #000;
-                font-weight: bolder;
-                font-family: 'Jost', sans-serif;
-            }
-
-            .btn {
-                justify-content: center;
-                padding: 1.5rem;
-                background-color: #fff;
-                outline: none;
-                border: 0;
-                font-size: 2rem;
-                color: #000;
-                cursor: pointer;
-                margin: 1rem auto;
-                font-weight: bolder;
-                font-family: 'Jost', sans-serif;
-            }
-
-            .output {
-                margin: 2rem auto;
-                color: #fff;
-                font-size: 3rem;
-            }
-
-            .message {
-                margin: 1rem auto;
-                color: #fff;
-                font-size: 3rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .main {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-
-            .weight {
-                margin: 1rem;
-                padding: 1rem;
-                background-color: #fff;
-                outline: none;
-                border: 0;
-                font-size: 20px;
-                color: #000;
-                font-weight: bolder;
-                font-family: 'Jost', sans-serif;
-            }
-
-            .height {
-                margin: 1rem;
-                padding: 1rem;
-                background-color: #fff;
-                outline: none;
-                border: 0;
-                font-size: 20px;
-                color: #000;
-                font-weight: bolder;
-                font-family: 'Jost', sans-serif;
-            }
-
-            .btn {
-                justify-content: center;
-                padding: 0.5rem;
-                background-color: #fff;
-                outline: none;
-                border: 0;
-                font-size: 18px;
-                color: #000;
-                cursor: pointer;
-                margin: 1rem auto;
-                font-weight: bolder;
-                font-family: 'Jost', sans-serif;
-            }
-
-            .output {
-                margin: 2rem auto;
-                color: #fff;
-                font-size: 25px;
-            }
-
-            .message {
-                margin: 1rem auto;
-                color: #fff;
-                font-size: 25px;
-            }
-        }
-    </style>
     <div class="conatiner">
         <div class="main" onsubmit="return myBmi()">
 
@@ -169,99 +29,10 @@
         </div>
     </div>
 
-
-
-    <script>
-        function myBmi() {
-
-            var w = document.getElementById("weight").value;
-            var h = document.getElementById("height").value;
-
-            var weight = parseFloat(w);
-            var height = parseFloat(h);
-
-            // console.log("Weight: ",typeof(weight));
-            // console.log("height: ",typeof(height));
-
-            //main code
-
-            bmi = ((weight) / (height) ** 2); //bmi formula
-
-            var res = (bmi.toString().slice(0, 5)); //string value to slice number
-
-            var res = parseFloat(res); //float value
-
-            if (w == "" || h == "") {
-                message = "Invalid";
-                document.getElementById("message").innerHTML = message;
-                res = "Does not Exist";
-                document.getElementById("output").innerHTML = res;
-            }
-            
-            if (weight <= 0 || height <= 0 ) {
-                message = "Invalid";
-                document.getElementById("message").innerHTML = message;
-                res = "Does not Exist";
-                document.getElementById("output").innerHTML = res;
-            }
-            
-            if (res < 16) {
-                message = "Severe Thinness";
-                document.getElementById("message").innerHTML = message;
-                document.getElementById("output").innerHTML = res; //result
-                $("body").css("background", "#30336B");
-            }
-
-            if (res > 16 && res < 17) {
-                message = "Moderate Thinness";
-                document.getElementById("message").innerHTML = message;
-                document.getElementById("output").innerHTML = res; //result
-                $("body").css("background", "#0A79DF");
-            }
-
-            if (res > 17 && res < 18.5) {
-                message = "Mild Thinness";
-                document.getElementById("message").innerHTML = message;
-                document.getElementById("output").innerHTML = res; //result
-                $("body").css("background", "#3498DB");
-            }
-
-            if (res > 18.5 && res < 25) {
-                message = "Normal";
-                document.getElementById("message").innerHTML = message;
-                document.getElementById("output").innerHTML = res; //result
-                $("body").css("background", "#26ae60");
-            }
-
-            if (res > 25 && res < 30) {
-                message = "Over weight";
-                document.getElementById("message").innerHTML = message;
-                document.getElementById("output").innerHTML = res; //result
-                $("body").css("background", "#FDD835");
-            }
-
-            if (res > 30 && res < 35) {
-                message = "Obese Class I";
-                document.getElementById("message").innerHTML = message;
-                document.getElementById("output").innerHTML = res; //result
-                $("body").css("background", "#F57C00");
-            }
-
-            if (res > 35 && res < 40) {
-                message = "Obese Class II";
-                document.getElementById("message").innerHTML = message;
-                document.getElementById("output").innerHTML = res; //result
-                $("body").css("background", "#E64A19");
-            }
-
-            if (res > 40) {
-                message = "Obese Class III";
-                document.getElementById("message").innerHTML = message;
-                document.getElementById("output").innerHTML = res; //result
-                $("body").css("background", "#B83227");
-            }
-        }
-    </script>
+    <!-- Script File -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery-2.1.4.js"></script>
+    <script src="./js/sript.js"></script>
 </body>
 
 </html>
